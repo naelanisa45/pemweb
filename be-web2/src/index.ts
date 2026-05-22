@@ -19,6 +19,8 @@ app.use("/categories", categoryRoutes);
 app.use("/pembicara", pembicaraRoutes);
 
 //jalankan server
+const PORT = process.env.PORT || 8080;
+
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
