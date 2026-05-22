@@ -6,7 +6,7 @@ export default function EventIndex() {
     const [ events, setEvents ] = useState<any[]>([]);
 
     useEffect(() => {
-                fetch("http://localhost:3000/events")
+                fetch("https://pemweb2-be-uts.up.railway.app/events")
                     .then((res) => res.json())
                     .then((data) => {
                         setEvents(data);
@@ -16,7 +16,7 @@ export default function EventIndex() {
             const handleDelete = async (id: number) => {
         try {
             const response = await fetch(
-                `http://localhost:3000/events/${id}`,
+                `https://pemweb2-be-uts.up.railway.app/events/${id}`,
                 {
                     method: "DELETE",
                 }

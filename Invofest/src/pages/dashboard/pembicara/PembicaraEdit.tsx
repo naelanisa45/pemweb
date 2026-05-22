@@ -31,7 +31,7 @@ export default function PembicaraEdit() {
 
     // ambil data category berdasarkan id
     useEffect(() => {
-        fetch(`http://localhost:3000/pembicara/${id}`)
+        fetch(`https://pemweb2-be-uts.up.railway.app/pembicara/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 setValue("name", data.name);
@@ -43,7 +43,7 @@ export default function PembicaraEdit() {
     const onSubmit = async (data: FormData) => {
         try {
             const response = await fetch(
-                `http://localhost:3000/pembicara/${id}`,
+                `https://pemweb2-be-uts.up.railway.app/pembicara/${id}`,
                 {
                     method: "PUT",
                     headers: {

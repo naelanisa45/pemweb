@@ -5,7 +5,7 @@ export default function PembicaraIndex() {
     const [pembicara, setPembicara] = useState<any[]>([]);
 
     useEffect(() => {
-            fetch("http://localhost:3000/pembicara")
+            fetch("https://pemweb2-be-uts.up.railway.app/pembicara")
                 .then((res) => res.json())
                 .then((data) => {
                     setPembicara(data);
@@ -15,7 +15,7 @@ export default function PembicaraIndex() {
         const handleDelete = async (id: number) => {
         try {
             const response = await fetch(
-                `http://localhost:3000/pembicara/${id}`,
+                `https://pemweb2-be-uts.up.railway.app/pembicara/${id}`,
                 {
                     method: "DELETE",
                 }

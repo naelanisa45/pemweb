@@ -25,7 +25,7 @@ export default function CategoryCreate() {
     const onSubmit = async (data: FormData) => {
         try {
             const response = await fetch(
-                "http://localhost:3000/categories",
+                "https://pemweb2-be-uts.up.railway.app/categories",
                 {
                     method: "POST",
                     headers: {

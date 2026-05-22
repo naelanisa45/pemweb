@@ -31,11 +31,11 @@ export default function EventCreate() {
     const navigate = useNavigate();
 
     useEffect(() => {
-    fetch("http://localhost:3000/categories")
+    fetch("https://pemweb2-be-uts.up.railway.app/categories")
         .then((res) => res.json())
         .then((data) => setCategories(data));
 
-    fetch("http://localhost:3000/pembicara")
+    fetch("https://pemweb2-be-uts.up.railway.app/pembicara")
         .then((res) => res.json())
         .then((data) => setPembicara(data));
 }, []);
@@ -51,7 +51,7 @@ export default function EventCreate() {
     const onSubmit = async (data: FormData) => {
         try {
             const response = await fetch(
-                "http://localhost:3000/events",
+                "https://pemweb2-be-uts.up.railway.app/events/${id}",
                 {
                     method: "POST",
                     headers: {

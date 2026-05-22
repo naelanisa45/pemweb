@@ -39,7 +39,7 @@ export default function EventEdit() {
 
     // ambil data event berdasarkan id
     useEffect(() => {
-        fetch(`http://localhost:3000/events/${id}`)
+        fetch(`https://pemweb2-be-uts.up.railway.app/events/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 setValue("name", data.name);
@@ -55,7 +55,7 @@ export default function EventEdit() {
     const onSubmit = async (data: FormData) => {
         try {
             const response = await fetch(
-                `http://localhost:3000/events/${id}`,
+                `https://pemweb2-be-uts.up.railway.app/event/${id}`,
                 {
                     method: "PUT",
                     headers: {

@@ -27,7 +27,7 @@ export default function SpeakerCreate() {
     const onSubmit = async (data: FormData) => {
         try {
             const response = await fetch(
-                "http://localhost:3000/pembicara",
+                "https://pemweb2-be-uts.up.railway.app/pembicara",
                 {
                     method: "POST",
                     headers: {

@@ -29,7 +29,7 @@ export default function CategoryEdit() {
 
     // ambil data category berdasarkan id
     useEffect(() => {
-        fetch(`http://localhost:3000/categories/${id}`)
+        fetch(`https://pemweb2-be-uts.up.railway.app/categories/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 setValue("name", data.name);
@@ -40,7 +40,7 @@ export default function CategoryEdit() {
     const onSubmit = async (data: FormData) => {
         try {
             const response = await fetch(
-                `http://localhost:3000/categories/${id}`,
+                `https://pemweb2-be-uts.up.railway.app/categories/${id}`,
                 {
                     method: "PUT",
                     headers: {
