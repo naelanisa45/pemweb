@@ -26,8 +26,8 @@ const schema = z.object({
 });
 
 export default function EventCreate() {
-    const [categories, setCategories] = useState([]);
-    const [pembicara, setPembicara] = useState([]);
+    const [categories, setCategories] = useState<any[]>([]);
+    const [pembicara, setPembicara] = useState<any[]>([]);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -45,7 +45,7 @@ export default function EventCreate() {
         handleSubmit,
         formState: { errors },
     } = useForm<FormData>({
-        resolver: zodResolver(schema),
+        resolver: zodResolver(schema) as any,
     });
 
     const onSubmit = async (data: FormData) => {

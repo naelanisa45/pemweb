@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 
 export default function EventIndex() {
-    const [ events, setEvents ] = useState([]);
+    const [ events, setEvents ] = useState<any[]>([]);
 
     useEffect(() => {
                 fetch("http://localhost:3000/events")

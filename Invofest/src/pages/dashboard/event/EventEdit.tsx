@@ -34,7 +34,7 @@ export default function EventEdit() {
         setValue,
         formState: { errors },
     } = useForm<FormData>({
-        resolver: zodResolver(schema),
+        resolver: zodResolver(schema) as any,
     });
 
     // ambil data event berdasarkan id

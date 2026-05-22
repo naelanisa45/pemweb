@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function CategoryIndex() {
 
-    const [categories, setCategories]= useState([]);
+    const [categories, setCategories]= useState<any[]>([]);
 
     useEffect(() => {
         fetch("http://localhost:3000/categories")

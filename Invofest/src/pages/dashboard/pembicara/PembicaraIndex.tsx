@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export default function PembicaraIndex() {
-    const [pembicara, setPembicara] = useState([]);
+    const [pembicara, setPembicara] = useState<any[]>([]);
 
     useEffect(() => {
             fetch("http://localhost:3000/pembicara")
